@@ -6,7 +6,7 @@
 *
 * Name: Jaya Nandhini Kannan ID: 161496237 Date: 07/16/2024
 *
-* Online (Verce;) Link: https://web700-app-psi.vercel.app/
+* Online (Verce;) Link: https://web700-app-seven.vercel.app/
 *
 *********************************************************************************/
 // Set the HTTP port to the value provided in the environment variable PORT or default to 8080
@@ -28,40 +28,21 @@ app.use(express.static(path.join(path.resolve(), 'public')));
 // Import the collegeData module which contains data-related functions
 const collegeData = require('./modules/collegeData');
 
-// Define paths to the HTML files for home, about, and HTML demo pages
-const home = 'views/home.html';
-const about = 'views/about.html';
-const htmldemo = 'views/htmlDemo.html';
-const addStudent='views/addStudent.html';
 
 // Define a route for the root URL ("/") to serve the home page
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, home));
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'home.html'));
 });
 
 // Define a route for the "/about" URL to serve the about page
-app.get("/about", function(req, res) {
-    res.sendFile(path.join(__dirname, about));
+app.get("/about", (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'about.html'));
 });
 
 // Define a route for the "/htmlDemo" URL to serve the HTML demo page
-app.get("/htmlDemo", function(req, res) {
-    res.sendFile(path.join(__dirname, htmldemo));
+app.get("/htmlDemo", (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'htmlDemo.html'));
 });
-
-app.get('/students/add', function(req, res) {
-    res.sendFile(path.join(__dirname, addStudent));
-});
-
-app.post('/students/add', (req, res) => {
-    collegeData.addStudent(req.body).then(() => {
-        res.redirect('/students');
-    }).catch(err => {
-        res.redirect('/students');
-        res.status(500).send("Unable to add student");
-    });
-});
-
 
 // Define a route for the "/students" URL to get students data
 app.get("/students", function(req, res) {
@@ -84,6 +65,21 @@ app.get("/students", function(req, res) {
                 res.json({ message: "No results" });
             });
     }
+});
+
+// Define a route for the "/students/add" URL to serve the addStudent page
+app.get('/students/add', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'addStudent.html'));
+});
+
+// Define a route for the "/students/add" URL to serve the addStudent post request
+app.post('/students/add', (req, res) => {
+    collegeData.addStudent(req.body).then(() => {
+        res.redirect('/students');
+    }).catch(err => {
+        res.redirect('/students');
+        res.status(500).send("Unable to add student");
+    });
 });
 
 // Define a route for the "/students/:num" URL to get a student by their number
@@ -131,3 +127,5 @@ collegeData.initialize()
     .catch((err) => {
         console.error(err);
     });
+
+module.exports = app;
