@@ -1,0 +1,43 @@
+/* Styles for odd table rows */
+table tr:nth-child(odd) td {
+    background: linear-gradient(135deg, #f2f2f2 25%, #e0e0e0 100%);
+}
+
+/* Styles for headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px #bbb;
+}
+
+/* Styles for anchor elements */
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #5ecd2b;
+}
+
+/* Styles for fieldset legends */
+legend {
+    padding: 15px 0;
+    font-family: 'Roboto', sans-serif;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px #bbb;
+}
+
+/* Additional styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ecf0f1;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}

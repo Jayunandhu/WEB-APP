@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WEB700</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/theme.css"> 
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Student Name</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+					<li class="nav-item active"><a class="nav-link" href="/htmlDemo">Html Demo</a></li>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/students/add">Add Students</a></li>
+					<li class="nav-item"><a class="nav-link" href="/students">Students</a></li>
+					<li class="nav-item"><a class="nav-link" href="/tas">Teaching Assistants</a></li>
+					<li class="nav-item"><a class="nav-link" href="/courses">Courses</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container my-5">
+            <div class="row">
+                <main class="col-lg-10 offset-lg-1 col-md-12">
+                        
+                    <section class="section">
+                        <h3>Football Team Tables</h3>
+                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-bordered">
+                                    <caption>Players table</caption>
+                                    <thead>
+                                        <tr>
+                                            <th >Position</th>
+                                            <th>Player Name</th>
+                                            <th>Number</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="2">Goalkeeper</td>
+                                            <td>John Smith</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <!-- <td>Defender</td> -->
+                                            <td>Jane Doe</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Midfielder</td>
+                                            <td>Michael Johnson</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Forward</td>
+                                            <td>Alice Brown</td>
+                                            <td>7</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="3">Substitutes: Alex Lee (2), Emma White (11), David Clark (8)</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+    
+                            <div class="col-md-12">
+                                <table class="table table-bordered">
+                                    <caption>Statistics table</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>Stat Category</th>
+                                            <th>Value</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Goals Scored</td>
+                                            <td>25</td>
+                                            <td>Number of goals scored by the team</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Assists</td>
+                                            <td>15</td>
+                                            <td>Number of assists made by the team</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Yellow Cards</td>
+                                            <td>10</td>
+                                            <td>Number of yellow cards received</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Red Cards</td>
+                                            <td>1</td>
+                                            <td>Number of red cards received</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+    
+                        <p>This section showcases two HTML tables related to a football team. The first table displays the starting lineup with player positions, names, and numbers, while the second table shows team statistics such as goals scored, assists, and cards received.</p>
+                    </section>
+    
+                        <section class="list-section">
+                            <h3>Lists</h3>
+                            
+                            <ol>
+                                <li>Introduction</li>
+                                <li>Background</li>
+                                <li>Main content
+                                    <ul>
+                                        <li>Topic A</li>
+                                        <li>Topic B</li>
+                                        <li>Topic C</li>
+                                    </ul>
+                                </li>
+                                <li>Summary</li>
+                                <li>Conclusion</li>
+                            </ol>
+        
+                            <p>This section showcases a list of contents.The parents list is ordered list whereas the nested list is unordered.</p>
+                         
+					<!-- Images Section -->
+					<div class="py-4">
+						<h2>Images Section</h2>
+						<div class="image-container">
+							<img src="https://cdn.pixabay.com/photo/2023/01/14/19/44/woman-7718940_1280.jpg" alt="Painting">
+							<img src="https://cdn.pixabay.com/photo/2023/03/01/03/21/racial-7822176_1280.jpg" alt="Perspective">
+							<img src="https://cdn.pixabay.com/photo/2023/10/03/09/59/bridge-8291058_1280.jpg" alt="Bridge stone bridge">
+						</div>
+						<p>This section features three images with descriptive "alt" text.</p>
+					</div>
+				
+					<!-- Audio Section -->
+					<div class="py-4">
+						<h2>Audio Section</h2>
+						<audio controls>
+							<source src="https://pat-crawford-sdds.netlify.app/shared/fall-2021/web700/A3/sample-audio.mp3" type="audio/mpeg">
+							<source src="https://pat-crawford-sdds.netlify.app/shared/fall-2021/web700/A3/sample-audio.ogg" type="audio/ogg">
+							Your browser does not support the audio element.
+						</audio>
+				
+						<p>Play the song to listen to HTML5 audio player with sample audio files.</p>
+					</div>
+				
+					<!-- Video Section -->
+					<div class="py-4">
+						<h2>Video Section</h2>
+						<video controls>
+							<source src="https://pat-crawford-sdds.netlify.app/shared/fall-2021/web700/A3/sample-video.mp4" type="video/mp4">
+							<source src="https://pat-crawford-sdds.netlify.app/shared/fall-2021/web700/A3/sample-video.ogg" type="video/ogg">
+							<source src="https://pat-crawford-sdds.netlify.app/shared/fall-2021/web700/A3/sample-video.webm" type="video/webm">
+							Your browser does not support the video element.
+						</video>
+				
+						<p>Play the video to see the sample video files in HTML video player.</p>
+					</div>
+				</main>				
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
+
+<style>
+    .image-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .image-container img {
+        width: 300px; /* Adjust this value as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Optional: Adjust margin between images */
+    }
+</style>
