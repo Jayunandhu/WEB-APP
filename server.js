@@ -78,7 +78,6 @@ app.post('/students/add', (req, res) => {
         res.redirect('/students');
     }).catch(err => {
         res.redirect('/students');
-        res.status(500).send("Unable to add student");
     });
 });
 
