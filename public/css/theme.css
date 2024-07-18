@@ -1,43 +1,108 @@
-/* Styles for odd table rows */
-table tr:nth-child(odd) td {
-    background: linear-gradient(135deg, #f2f2f2 25%, #e0e0e0 100%);
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* Body and HTML elements for full page gradient */
+body, html {
+    background: linear-gradient(to right, #e6e6fa, #d8bfd8); /* Lavender gradient */
+    overflow: auto;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
 }
 
-/* Styles for headings */
+/* Navigation Bar */
+.bg-light {
+    background-color: #d8bfd8 !important; /* Light lavender background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Brand */
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    color: #000 !important; /* Black color */
+    font-weight: bold; /* Bold font */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow */
+    font-size: 2em; /* Increase font size */
+}
+
+/* Navigation Link */
+.nav-link {
+    font-family: 'Dancing Script', cursive;
+    color: #000 !important; /* Black color */
+    font-weight: bold; /* Bold font */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Text shadow */
+    transition: color 0.3s;
+    font-size: 1.5em; /* Increase font size */
+}
+
+.nav-link:hover {
+    color: #dda0dd !important; /* Darker lavender hover color */
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: #9370db; /* Medium lavender color */
+    border-color: #9370db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #8a2be2; /* Darker lavender */
+    border-color: #8a2be2;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.table th {
+    background-color: #d8bfd8; /* Light lavender */
+    color: #333;
+}
+
+/* Alternating row colors */
+.table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray */
+}
+
+.table tr:nth-child(odd) {
+    background-color: #ffffff; /* White */
+}
+
+/* Additional Elements */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif;
-    color: #2c3e50;
-    text-shadow: 2px 2px 4px #bbb;
+    color: #000; /* Black color */
+    font-weight: bold; /* Bold font */
 }
 
-/* Styles for anchor elements */
+p {
+    line-height: 1.6;
+}
+
 a {
-    color: #2980b9;
-    text-decoration: none;
+    color: #9370db; /* Medium lavender */
+    transition: color 0.3s;
 }
 
 a:hover {
-    color: #5ecd2b;
+    color: #8a2be2; /* Darker lavender */
 }
 
-/* Styles for fieldset legends */
+.container {
+    padding: 20px;
+}
+
 legend {
-    padding: 15px 0;
-    font-family: 'Roboto', sans-serif;
-    color: #2c3e50;
-    text-shadow: 2px 2px 4px #bbb;
-}
-
-/* Additional styling */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #ecf0f1;
-}
-
-.navbar {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    font-weight: bold;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
