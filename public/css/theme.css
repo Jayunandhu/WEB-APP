@@ -38,6 +38,10 @@ body, html {
     color: #dda0dd !important; /* Darker lavender hover color */
 }
 
+.navbar-nav .nav-item.active .nav-link {
+    font-weight: bold; /* Bold font */
+  }
+
 /* Primary Button */
 .btn-primary {
     background-color: #9370db; /* Medium lavender color */

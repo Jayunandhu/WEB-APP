@@ -45,16 +45,16 @@ const getAllStudents = () => {
     });
 };
 
-const getTAs = () => {
-    return new Promise((resolve, reject) => {
-        const TAs = dataCollection.students.filter(student => student.TA === true);
-        if (TAs.length === 0) {
-            reject("No results.");
-        } else {
-            resolve(TAs);
-        }
-    });
-};
+// const getTAs = () => {
+//     return new Promise((resolve, reject) => {
+//         const TAs = dataCollection.students.filter(student => student.TA === true);
+//         if (TAs.length === 0) {
+//             reject("No results.");
+//         } else {
+//             resolve(TAs);
+//         }
+//     });
+// };
 
 const getCourses = () => {
     return new Promise((resolve, reject) => {
@@ -106,12 +106,44 @@ function addStudent(studentData) {
         });
     });
 }
+
+function updateStudent(studentData) {
+    return new Promise((resolve, reject) => {
+        const index = dataCollection.students.findIndex(student => student.studentNum === parseInt(studentData.studentNum));
+        if (index === -1) {
+            reject('Student not found');
+        } else {
+            studentData.TA = studentData.TA !== undefined;
+            dataCollection.students[index] = studentData;
+            fs.writeFile(studentLink, JSON.stringify(dataCollection.students, null, 2), (err) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve();
+                }
+            });
+        }
+    });
+}
+
+const getCourseById = (id) => {
+    return new Promise((resolve, reject) => {
+        const selectedCourse = dataCollection.courses.filter(course => course.courseId === parseInt(id));
+        if (selectedCourse.length > 0) {
+            resolve(selectedCourse);
+        } else {
+            reject('query returned 0 results');
+        }
+    });
+};
 module.exports = {
     initialize,
     getAllStudents,
-    getTAs,
+    // getTAs,
     getCourses,
     getStudentsByCourse,
     getStudentsByNum,
-    addStudent
+    addStudent,
+    getCourseById,
+    updateStudent
 };

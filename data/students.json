@@ -1,19 +1,19 @@
 [
   {
     "studentNum": 1,
-    "firstName": "Foster",
-    "lastName": "Thorburn",
+    "firstName": "Jaya",
+    "lastName": "Nandhini",
     "email": "fthorburn0@mySeneca.ca",
     "addressStreet": "8 Arapahoe Park",
     "addressCity": "Toronto",
     "addressProvince": "ON",
     "TA": true,
-    "status": "Full Time",
-    "course": 2
+    "status": "Part Time",
+    "course": 1
   },
   {
     "studentNum": 2,
-    "firstName": "Emmy",
+    "firstName": "Emmy one",
     "lastName": "Trehearne",
     "email": "etrehearne1@mySeneca.ca",
     "addressStreet": "66965 Shelley Circle",
@@ -21,7 +21,7 @@
     "addressProvince": "ON",
     "TA": true,
     "status": "Full Time",
-    "course": 2
+    "course": 7
   },
   {
     "studentNum": 3,
