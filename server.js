@@ -6,7 +6,7 @@
 *
 * Name: Jaya Nandhini Kannan ID: 161496237 Date: 07/16/2024
 *
-* Online (Verce;) Link: https://web700-app-chi.vercel.app/
+* Online (Verce;) Link: https://web700-app-nine.vercel.app/
 *
 *********************************************************************************/
 // Set the HTTP port to the value provided in the environment variable PORT or default to 8080
@@ -47,6 +47,8 @@ app.engine('.hbs', exphbs.engine({
 }));
 
 app.set('view engine', '.hbs');
+
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(path.resolve(), 'public')));
 
@@ -148,7 +150,8 @@ app.post('/student/update', (req, res) => {
             res.redirect('/students');
         })
         .catch(err => {
-            res.status(500).send("Unable to update student: " + err);
+            res.redirect('/students');
+            // res.status(500).send("Unable to update student: " + err);
         });
 });
 
