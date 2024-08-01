@@ -8,6 +8,7 @@ class Data {
 }
 
 var sequelize = new Sequelize('neondb', 'neondb_owner', '1bhSoa5ftLdr', {
+    dialectModule: require('pg'),
     host: 'ep-round-violet-a58g52sh.us-east-2.aws.neon.tech',
     dialect: 'postgres',
     port: 5432,
